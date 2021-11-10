@@ -5,6 +5,30 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
+    'responsive-image': {
+      fingerprint: true,
+      images: [
+        {
+          include: 'assets/images/**/*',
+          quality: 50,
+          formats: ['original', 'webp', 'avif'],
+          lqip: {
+            type: 'inline',
+          },
+          removeSource: true,
+        },
+        {
+          include: 'assets/blurhash/**/*',
+          quality: 50,
+          widths: [100, 640],
+          formats: ['original', 'webp', 'avif'],
+          lqip: {
+            type: 'blurhash',
+          },
+          removeSource: true,
+        },
+      ],
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
