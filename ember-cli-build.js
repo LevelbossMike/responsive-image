@@ -7,6 +7,7 @@ module.exports = function (defaults) {
     // Add options here
     'responsive-image': {
       fingerprint: true,
+      usesBlurhash: true,
       images: [
         {
           include: 'assets/images/**/*',
