@@ -17,16 +17,6 @@ module.exports = function (defaults) {
           },
           removeSource: true,
         },
-        {
-          include: 'assets/blurhash/**/*',
-          quality: 50,
-          widths: [100, 640],
-          formats: ['original', 'webp', 'avif'],
-          lqip: {
-            type: 'blurhash',
-          },
-          removeSource: true,
-        },
       ],
     },
   });
